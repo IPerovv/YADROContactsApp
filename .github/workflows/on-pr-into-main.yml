@@ -1,0 +1,36 @@
+name: On PR Android Workflow
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+
+  run-unit-tests:
+    needs: build
+    uses: ./.github/workflows/run-unit-tests.yml
+
+  run-lint:
+    needs: build
+    uses: ./.github/workflows/run-lint.yml
+
+  build-debug-artifacts:
+    if: success()
+    needs: [ build, run-unit-tests, run-lint]
+    uses: ./.github/workflows/build-debug-apk.yml
+
+  send-results:
+    needs: [ build, run-unit-tests, run-lint, build-debug-artifacts]
+    uses: ./.github/workflows/send-results.yml
+    if: always()
+    secrets: inherit
+    with:
+      build_result: ${{ needs['build'].result }}
+      unit_result: ${{ needs['run-unit-tests'].result }}
+      lint_result: ${{ needs['run-lint'].result }}
+      instr_result: "SKIP"
+      repo: ${{ github.repository }}
+      branch: ${{ github.head_ref || github.ref_name }}
+      actor: ${{ github.actor }}

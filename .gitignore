@@ -1,0 +1,53 @@
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Local configuration (SDK path, signing configs)
+local.properties
+key.properties
+
+# Android Studio / IntelliJ configs
+.idea/
+.idea/misc.xml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+*.iml
+
+# Android Studio generated folders
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Keystore files (signing)
+*.jks
+*.keystore
+
+# Google Services configs (Firebase, etc.)
+google-services.json
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# APKs / Bundles / Output
+*.apk
+*.aab
+*.ap_
+output-metadata.json
+
+# Profiling / Heap dumps
+*.hprof
+
+# Temporary / backup files
+*.orig
+*.tmp
+*.swp
+*.swo
+
+# Kotlin build cache
+.kotlin/
