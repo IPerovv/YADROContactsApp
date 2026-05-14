@@ -1,4 +1,4 @@
-package com.example.yadrocontactsapp.ui.theme
+package com.iperovv.yadrocontactsapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
