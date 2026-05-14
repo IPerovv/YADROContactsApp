@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.yadrocontactsapp"
+    namespace = "com.iperovv.yadrocontactsapp"
     compileSdk {
         version =
             release(36) {
@@ -16,7 +16,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.yadrocontactsapp"
+        applicationId = "com.iperovv.yadrocontactsapp"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

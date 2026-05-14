@@ -1,4 +1,4 @@
-package com.example.yadrocontactsapp.domain
+package com.iperovv.yadrocontactsapp.domain
 
 data class ContactData(
     val id: String,

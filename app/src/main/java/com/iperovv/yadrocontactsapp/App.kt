@@ -1,4 +1,4 @@
-package com.example.yadrocontactsapp
+package com.iperovv.yadrocontactsapp
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

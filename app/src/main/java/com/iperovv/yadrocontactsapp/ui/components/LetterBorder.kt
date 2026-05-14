@@ -1,4 +1,4 @@
-package com.example.yadrocontactsapp.ui.components
+package com.iperovv.yadrocontactsapp.ui.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,7 +10,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.yadrocontactsapp.ui.common.PreviewData
+import com.iperovv.yadrocontactsapp.ui.common.PreviewData
 
 @Composable
 fun LetterBorder(

@@ -1,4 +1,4 @@
-package com.example.yadrocontactsapp.ui.screens
+package com.iperovv.yadrocontactsapp.ui.screens
 
 import androidx.lifecycle.ViewModel
 

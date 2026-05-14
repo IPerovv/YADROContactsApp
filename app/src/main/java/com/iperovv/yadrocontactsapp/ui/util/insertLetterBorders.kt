@@ -1,7 +1,7 @@
-package com.example.yadrocontactsapp.ui.util
+package com.iperovv.yadrocontactsapp.ui.util
 
-import com.example.yadrocontactsapp.domain.ContactData
-import com.example.yadrocontactsapp.domain.ContactListItem
+import com.iperovv.yadrocontactsapp.domain.ContactData
+import com.iperovv.yadrocontactsapp.domain.ContactListItem
 
 fun insertLetterBorders(contacts: List<ContactData>): List<ContactListItem> {
     val grouped = contacts.groupBy { it.name.first().uppercaseChar() }

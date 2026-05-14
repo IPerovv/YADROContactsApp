@@ -1,4 +1,4 @@
-package com.example.yadrocontactsapp
+package com.iperovv.yadrocontactsapp
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
