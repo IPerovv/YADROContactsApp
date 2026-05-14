@@ -2,7 +2,7 @@ name: On PR Android Workflow
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ main, master ]
 
 jobs:
   build:
