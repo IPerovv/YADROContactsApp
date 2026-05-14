@@ -1,4 +1,4 @@
-package com.iperovv.yadrocontactsapp.ui.components
+package com.iperovv.yadrocontactsapp.ui.screens.mainscreen.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth

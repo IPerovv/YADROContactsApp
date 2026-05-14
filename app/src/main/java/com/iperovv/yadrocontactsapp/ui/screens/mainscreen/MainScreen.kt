@@ -1,4 +1,4 @@
-package com.iperovv.yadrocontactsapp.ui.screens
+package com.iperovv.yadrocontactsapp.ui.screens.mainscreen
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
@@ -10,11 +10,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import com.iperovv.yadrocontactsapp.domain.ContactData
-import com.iperovv.yadrocontactsapp.domain.ContactListItem
+import com.iperovv.yadrocontactsapp.domain.model.ContactData
+import com.iperovv.yadrocontactsapp.domain.model.ContactListItem
 import com.iperovv.yadrocontactsapp.ui.common.PreviewData
-import com.iperovv.yadrocontactsapp.ui.components.ContactListUIItem
-import com.iperovv.yadrocontactsapp.ui.components.LetterBorder
+import com.iperovv.yadrocontactsapp.ui.screens.mainscreen.components.ContactListUIItem
+import com.iperovv.yadrocontactsapp.ui.screens.mainscreen.components.LetterBorder
 import com.iperovv.yadrocontactsapp.ui.util.insertLetterBorders
 
 @Composable

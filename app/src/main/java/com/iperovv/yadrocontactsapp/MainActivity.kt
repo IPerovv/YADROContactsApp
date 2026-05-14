@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.iperovv.yadrocontactsapp.ui.screens.MainScreen
+import com.iperovv.yadrocontactsapp.ui.screens.mainscreen.MainScreen
 import com.iperovv.yadrocontactsapp.ui.theme.YADROContactsAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 

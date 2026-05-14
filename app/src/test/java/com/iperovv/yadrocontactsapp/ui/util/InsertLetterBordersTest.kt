@@ -1,7 +1,7 @@
 package com.iperovv.yadrocontactsapp.ui.util
 
-import com.iperovv.yadrocontactsapp.domain.ContactData
-import com.iperovv.yadrocontactsapp.domain.ContactListItem
+import com.iperovv.yadrocontactsapp.domain.model.ContactData
+import com.iperovv.yadrocontactsapp.domain.model.ContactListItem
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

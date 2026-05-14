@@ -1,6 +1,6 @@
 package com.iperovv.yadrocontactsapp.ui.common
 
-import com.iperovv.yadrocontactsapp.domain.ContactData
+import com.iperovv.yadrocontactsapp.domain.model.ContactData
 
 object PreviewData {
     val previewContactsList =

@@ -1,4 +1,4 @@
-package com.iperovv.yadrocontactsapp.domain
+package com.iperovv.yadrocontactsapp.domain.model
 
 sealed class ContactListItem {
     data class ContactLetterBorder(
