@@ -50,6 +50,17 @@ class InsertLetterBordersTest {
     }
 
     @Test
+    fun contactWithoutName_groupedUnderHashSymbol() {
+        val unnamed = contact("", id = "1")
+        val expected =
+            listOf(
+                ContactListItem.ContactLetterBorder('#'),
+                ContactListItem.Contact(unnamed),
+            )
+        assertEquals(expected, insertLetterBorders(listOf(unnamed)))
+    }
+
+    @Test
     fun sameLetterInMultipleContacts_sortedByInputOrder() {
         val c1 = contact("Charlie", id = "1")
         val c2 = contact("Chris", id = "2")

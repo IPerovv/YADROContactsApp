@@ -1,6 +1,5 @@
 package com.iperovv.yadrocontactsapp.ui.common
 
-import androidx.annotation.StringRes
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -83,9 +82,4 @@ fun PermissionDialog(
             }
         }
     }
-}
-
-interface PermissionTextProvider {
-    @StringRes
-    fun descriptionRes(isPermanentlyDeclined: Boolean): Int
 }
