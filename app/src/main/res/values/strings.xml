@@ -7,4 +7,6 @@
     <string name="permission_read_contacts_permanently_declined">It seems you permanently declined contacts permission. You can go to the app settings to grant it.</string>
     <string name="permission_call_phone_rationale">This app needs phone calling permission so that you can talk to your contacts.</string>
     <string name="permission_call_phone_permanently_declined">It seems you permanently declined phone calling permission. You can go to the app settings to grant it.</string>
+    <string name="phonenumber_must_not_be_blank">phoneNumber must not be blank</string>
+    <string name="unknown_permission">Unknown permission: %1$s</string>
 </resources>

@@ -16,7 +16,5 @@ abstract class TelephonyModule {
     abstract fun bindCallLauncher(impl: CallLauncherImpl): CallLauncher
 
     @Binds
-    abstract fun bindCheckCallPermissionStatus(
-        impl: CheckCallPermissionStatusImpl,
-    ): CheckCallPermissionStatus
+    abstract fun bindCheckCallPermissionStatus(impl: CheckCallPermissionStatusImpl): CheckCallPermissionStatus
 }

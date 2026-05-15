@@ -15,6 +15,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.app.ActivityCompat
@@ -37,6 +38,7 @@ fun MainScreen(
     viewModel: MainScreenViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val resources = LocalContext.current.resources
     val activity = LocalActivity.current as ComponentActivity
 
     val multiplePermissionsLauncher =
@@ -63,7 +65,7 @@ fun MainScreen(
                 ContextCompat.checkSelfPermission(activity, permission) != PackageManager.PERMISSION_GRANTED
 
         PermissionDialog(
-            permissionTextProvider = PermissionRationaleTexts.providerFor(permission),
+            permissionTextProvider = PermissionRationaleTexts.providerFor(permission, resources),
             isPermanentlyDeclined = isPermanentlyDeclined,
             onDismiss = viewModel::dismissDialog,
             onOkClick = {

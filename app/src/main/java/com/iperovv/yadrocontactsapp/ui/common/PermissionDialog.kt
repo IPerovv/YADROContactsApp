@@ -78,8 +78,7 @@ fun PermissionDialog(
                                 } else {
                                     onOkClick()
                                 }
-                            }
-                            .padding(16.dp),
+                            }.padding(16.dp),
                 )
             }
         }

@@ -1,15 +1,19 @@
 package com.iperovv.yadrocontactsapp.ui.common
 
-import android.Manifest
+import android.content.res.Resources
 import androidx.annotation.StringRes
 import com.iperovv.yadrocontactsapp.R
+import com.iperovv.yadrocontactsapp.common.permissions.AppPermissions
 
 object PermissionRationaleTexts {
-    fun providerFor(permission: String): PermissionTextProvider =
+    fun providerFor(
+        permission: String,
+        resources: Resources,
+    ): PermissionTextProvider =
         when (permission) {
-            Manifest.permission.READ_CONTACTS -> ReadContactsPermissionTextProvider
-            Manifest.permission.CALL_PHONE -> PhoneCallPermissionTextProvider
-            else -> error("Unknown permission: $permission")
+            AppPermissions.READ_CONTACTS -> ReadContactsPermissionTextProvider
+            AppPermissions.CALL_PHONE -> PhoneCallPermissionTextProvider
+            else -> error(resources.getString(R.string.unknown_permission, permission))
         }
 }
 
