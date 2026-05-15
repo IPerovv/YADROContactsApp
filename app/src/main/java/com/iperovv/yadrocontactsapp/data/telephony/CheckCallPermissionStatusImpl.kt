@@ -8,7 +8,7 @@ import com.iperovv.yadrocontactsapp.domain.telephony.CheckCallPermissionStatus
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
-class CheckCallPermissionStatusStatusImpl @Inject constructor(
+class CheckCallPermissionStatusImpl @Inject constructor(
     @ApplicationContext private val context: Context,
 ) : CheckCallPermissionStatus {
     override fun isGranted(): Boolean =

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">YADROContactsApp</string>
+    <string name="permission_required_title">Permission required</string>
+    <string name="grant_permission">Grant permission</string>
+    <string name="ok">OK</string>
+    <string name="permission_read_contacts_rationale">This app needs access to your contacts so you can see your contact book.</string>
+    <string name="permission_read_contacts_permanently_declined">It seems you permanently declined contacts permission. You can go to the app settings to grant it.</string>
+    <string name="permission_call_phone_rationale">This app needs phone calling permission so that you can talk to your contacts.</string>
+    <string name="permission_call_phone_permanently_declined">It seems you permanently declined phone calling permission. You can go to the app settings to grant it.</string>
 </resources>
