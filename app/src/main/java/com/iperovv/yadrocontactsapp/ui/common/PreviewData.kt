@@ -1,11 +1,11 @@
 package com.iperovv.yadrocontactsapp.ui.common
 
-import com.iperovv.yadrocontactsapp.domain.ContactData
+import com.iperovv.yadrocontactsapp.domain.model.ContactData
 
 object PreviewData {
     val previewContactsList =
         listOf(
-            ContactData("1", "", "+79123456789", "Александр"),
+            ContactData("1", "", "+79616550212", "Александр"),
             ContactData("2", "", "+79234567890", "Елена"),
             ContactData("3", "", "+79345678901", "Михаил"),
             ContactData("4", "", "+79456789012", "Анна"),

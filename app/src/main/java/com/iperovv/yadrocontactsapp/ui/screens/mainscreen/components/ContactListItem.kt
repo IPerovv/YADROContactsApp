@@ -1,4 +1,4 @@
-package com.iperovv.yadrocontactsapp.ui.components
+package com.iperovv.yadrocontactsapp.ui.screens.mainscreen.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -19,7 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.iperovv.yadrocontactsapp.domain.ContactData
+import com.iperovv.yadrocontactsapp.domain.model.ContactData
 import com.iperovv.yadrocontactsapp.ui.common.PreviewData
 
 @Composable
