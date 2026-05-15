@@ -3,9 +3,10 @@ package com.iperovv.yadrocontactsapp.ui.screens.mainscreen
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.iperovv.yadrocontactsapp.common.permissions.AppPermissions
+import com.iperovv.yadrocontactsapp.domain.contacts.CheckContactsPermissionStatus
+import com.iperovv.yadrocontactsapp.domain.contacts.ContactsRepository
 import com.iperovv.yadrocontactsapp.domain.telephony.CallLauncher
 import com.iperovv.yadrocontactsapp.domain.telephony.CheckCallPermissionStatus
-import com.iperovv.yadrocontactsapp.ui.common.PreviewData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -16,6 +17,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainScreenViewModel @Inject constructor(
+    private val contactsRepository: ContactsRepository,
+    private val contactsPermissionStatus: CheckContactsPermissionStatus,
     private val callLauncher: CallLauncher,
     private val callPermissionStatus: CheckCallPermissionStatus,
 ) : ViewModel() {
@@ -25,12 +28,15 @@ class MainScreenViewModel @Inject constructor(
     private var pendingCallPhoneNumber: String? = null
 
     init {
-        loadContacts()
+        tryLoadContacts()
     }
 
-    fun loadContacts() {
+    fun tryLoadContacts() {
+        if (!contactsPermissionStatus.isGranted()) return
+
         viewModelScope.launch {
-            _uiState.update { it.copy(contacts = PreviewData.previewContactsList) }
+            val contacts = contactsRepository.getContacts()
+            _uiState.update { it.copy(contacts = contacts) }
         }
     }
 
@@ -59,9 +65,12 @@ class MainScreenViewModel @Inject constructor(
         isGranted: Boolean,
     ) {
         if (isGranted) {
-            if (permission == AppPermissions.CALL_PHONE) {
-                pendingCallPhoneNumber?.let { callLauncher.makeCall(it) }
-                pendingCallPhoneNumber = null
+            when (permission) {
+                AppPermissions.READ_CONTACTS -> tryLoadContacts()
+                AppPermissions.CALL_PHONE -> {
+                    pendingCallPhoneNumber?.let { callLauncher.makeCall(it) }
+                    pendingCallPhoneNumber = null
+                }
             }
         } else {
             enqueuePermissionDialog(permission)

@@ -4,7 +4,10 @@ import com.iperovv.yadrocontactsapp.domain.model.ContactData
 import com.iperovv.yadrocontactsapp.domain.model.ContactListItem
 
 fun insertLetterBorders(contacts: List<ContactData>): List<ContactListItem> {
-    val grouped = contacts.groupBy { it.name.first().uppercaseChar() }
+    val grouped =
+        contacts.groupBy { contact ->
+            contact.name.firstOrNull()?.uppercaseChar() ?: '#'
+        }
     val result = mutableListOf<ContactListItem>()
 
     grouped.toSortedMap().forEach { (letter, contactsInGroup) ->
